@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#myCanvas{
+			background-color: #F1F5F9;
+			border:2px solid #609FDF;
+		}
+		#container{
+			width: 990px;
+			margin: 15px auto;
+		}
+		button{
+			width: 100px;
+			font-size: 15px;
+			border-radius: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var canvas = $("#myCanvas");
+			var context = canvas.get(0).getContext("2d");
+
+			var canvasWidth = canvas.width();
+			var canvasHeight = canvas.height();
+
+			var playAnimation = false;
+			var startButton = $("#startAnimation");
+			var stopButton = $("#stopAnimation");
+
+			var snakeX1 = snakeY1 = 40;
+			var snakeX2 = 20;
+			var snakeY2 = 40;
+			var foodX = foodY = 100;
+			var direction = 4;
+			var snakeNodes = 2;
+			var snakeLiving = true;
+			var snakes = new Array();
+
+			var Snake = function(x,y){
+				this.x = x;
+				this.y = y;
+			}
+			snakes.push(new Snake(snakeX1,snakeY1));
+			snakes.push(new Snake(snakeX2,snakeY2));
+
+			startButton.click(function(){
+				playAnimation = true;
+				animate();
+			});
+			stopButton.click(function(){
+				playAnimation = false;
+			});
+
+			function animate(){
+				context.clearRect(0,0,canvasWidth,canvasHeight);
+				if( (foodX == snakes[0].x) && (foodY == snakes[0].y)){
+					foodX = (parseInt(Math.random()*29))*20;
+					foodY = (parseInt(Math.random()*29))*20;
+					snakes.push(new Snake(snakes[snakeNodes-1].x,snakes[snakeNodes-1].y));
+				}
+				for(var i=snakes.length-1;i>0;i--){
+					snakes[i].x = snakes[i-1].x; 
+					snakes[i].y = snakes[i-1].y;
+				}
+				switch(direction){
+					case 1:snakes[0].y-=20;break;
+					case 2:snakes[0].y+=20;break;
+					case 3:snakes[0].x-=20;break;
+					case 4:snakes[0].x+=20;break;
+					default:break;
+				}
+				context.fillStyle = "#3BF097";
+				context.fillRect(foodX,foodY,20,20);
+				context.fillStyle = "#EC8510";
+				for(var i=0;i<snakes.length;i++){
+					context.fillRect(snakes[i].x,snakes[i].y,20,20);
+				}
+
+				if((snakes[0].x<0)||(snakes[0].x>canvasWidth-20) || (snakes[0].y<0) || (snakes[0].y>canvasHeight-20)){
+					snakeLiving = false;
+				}
+				for(var i=1;i<snakes.length;i++){
+					if(snakes[0].x==snakes[i].x && snakes[0].y==snakes[i].y){
+						snakeLiving = false;
+						break;
+					}
+				}
+				if(!snakeLiving){
+					if(confirm("The snake has been dead! Would you like to try again?")){
+        				location.reload();
+     				}else{
+				      	window.close();
+				    }
+				}
+
+				if(playAnimation){
+					setTimeout(animate,100);
+				}
+			};
+			animate();
+
+			$(window).keydown(function(e){
+				switch(e.keyCode){
+					case 38: direction = 1;break;
+					case 40: direction = 2;break;
+					case 37: direction = 3;break;
+					case 39: direction = 4;break;
+					default: break;
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="container" align="center">
+	<button id="startAnimation">Start</button>
+	<button id="stopAnimation">Stop</button>
+	<canvas id="myCanvas" width="600px" height="600px"></canvas>
+</div>
+</body>
+</html>
