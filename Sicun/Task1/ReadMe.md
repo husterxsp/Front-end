@@ -28,7 +28,11 @@
 <br />
 ![](http://i.imgur.com/zoBqUYq.png)
 <br />
-<h4 style="text-indent: 2em;">一开始这样直接获取，可是获取的width完全不知道是什么东西？？？？<br />
+<h4 style="text-indent: 2em;">一开始这样直接获取，可是获取的width完全不知道是什么东西？？？
+<br />
+问题解决，原因如下：<br />
+$("."+maxClass)是jQuery对象，如果想这样获取宽度，应该这样写$("."+maxClass).width()。或者转化为dom对象：$("."+maxClass)[0].width或者$("."+maxClass).get(0).width。下面新建的Image是一个dom对象。注意区分jQuery对象和dom对象就是了。
+<br />
 在网上查了，说是要这样：
 <br />
 ![](http://i.imgur.com/bEOUgRR.png)
@@ -36,7 +40,13 @@
 <h4 style="text-indent: 2em;">也就是新建一个临时的Image对象，用这个来获取原图的宽和高
 <br />
 <h4 style="text-indent: 2em;">然后是图片的在屏幕居中显示的问题：
-一开始我用到window.innerHeight和window.innerWidth,但是，window.innerWidth包括了滚动条的宽度，所以会影响到图片的居中效果，然后改用document.body.clientWidth，实现了图片的完美居中~ 但是这个好像有兼容性的问题。。IE和360为什么没起作用。。。？？
+一开始我用到window.innerHeight和window.innerWidth,但是，window.innerWidth包括了滚动条的宽度，所以会影响到图片的居中效果，然后改用document.body.clientWidth，实现了图片的完美居中~ 但是这个好像有兼容性的问题。。IE和360为什么没起作用。。。？？？
+
+<h4 style="text-indent: 2em;">问题解决，原因如下：
+<br >
+![](http://i.imgur.com/cJGjxkd.png)
+![](http://i.imgur.com/u8z4984.png)
+因为浏览器限制了脚本的运行，解决办法：工具->Internet选项->高级->在设置里选择 允许活动内容在我的电脑显示
 
 ----------
 <h4 style="text-indent: 2em;">5.最后是一个关于icon的问题：<br />
