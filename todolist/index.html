@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Todoist</title>
+	<link rel="icon" href="./images/todoist_icon.png">
+	<link rel="stylesheet" type="text/css" href="./css/task.css">
+</head>
+<body>
+<div id="taskMain">
+	<ul id="taskList"></ul>
+	<div id="iconMenu">
+		<div class="addUp menulist">添加任务到上面</div>
+		<div class="addDown menulist">添加任务到下面</div>
+		<!-- <div class="child menulist">添加子任务</div> -->
+		<div class="edit menulist">编辑任务</div>
+		<div class="remove menulist">删除任务</div>
+	</div>
+	<div id="addTask">
+		<div class="taskField">
+	        <label>任务描述：</label>
+	        <input type="text" name="content" placeholder="请填入要做的内容">
+	    </div>
+	    <div class="taskField">
+	        <label>所属项目：</label>
+	        <select name="items">
+				<option value="1">个人</option>
+				<option value="2">工作</option>
+				<option value="3">杂项</option>
+				<option value="4">购物</option>
+			</select>
+	    </div>
+	    <div class="taskField">
+	        <label>截至时间：</label>
+	        <input type="date" name="deadline" /><br/>
+	    </div>
+	    <div class="taskField">
+			<button id="addTaskBtn">添加任务</button>
+			<span id="taskCancle">取消</span>
+		</div>
+	</div>
+
+	<a id="addTaskLink" href="javascript:addTask()">+ 添加任务</a>
+</div>
+<script src="./js/task.js"></script>
+</body>
+</html>

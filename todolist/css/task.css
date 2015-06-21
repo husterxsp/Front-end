@@ -1,0 +1,97 @@
+body {
+	font-family: Courier,"微软雅黑",sans-serif;
+}
+a {
+	color: red;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#taskMain ul::before {
+	content: "任务列表";
+}
+li {
+	list-style-type:none;
+    padding: 0.5em;
+}
+#taskMain{
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    border: solid 1px #fff;
+}
+#addTask {
+	display: none;
+    position: relative;
+}
+#addTaskBtn{
+    font-weight: 600;
+    cursor: pointer;
+    color: white !important;
+    border: 1px solid transparent;
+    border-radius: 2px !important;
+    background: #dd4b39;
+    border: 1px solid transparent;
+    padding: 5px 12px;
+}
+#addTaskBtn:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+#taskCancle {
+	cursor: pointer;
+}
+.taskField {
+    margin: 0.5em 0;
+}
+.taskField>label:first-child {
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+}
+#addTask 
+input[type=text],
+input[type=date],
+textarea,
+select {
+    width: 20em;
+    padding: 0.3em 0.5em;
+    box-sizing: border-box;
+}
+input:checked+span {
+	text-decoration:line-through;
+	color:grey;
+}
+textarea {
+    vertical-align: top;
+}
+.taskField:last-child {
+    margin-left: 7em;
+}
+.icon.menu{
+    visibility: hidden;
+    margin: 0.1em 1em;
+    float: right;
+    cursor: pointer;
+}
+#iconMenu {
+    position: fixed;
+    display: none;
+    width: 10em;
+    height: 8em;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow:0 0 10px 2px #aaa;
+    text-align: center;
+}
+.menulist {
+    width: 100%;
+    height: 2em;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-sizing:border-box;
+}
+.menulist:hover {
+    background-color: gray;
+}

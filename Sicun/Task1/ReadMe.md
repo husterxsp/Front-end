@@ -1,4 +1,5 @@
 #前端组任务分享
+[demo](http://1.husterxsp.sinaapp.com/Sicun/Task1/)
 ####任务：仿照 [https://www.behance.net/gallery/24416019/Selfpromotion-FREE_CV](https://www.behance.net/gallery/24416019/Selfpromotion-FREE_CV "简历模板") 写一个自己的简历页面
 
 <p style="text-indent: 2em;">1. 首先看到这个页面时，，就觉着这个页面的布局怎么感觉有点乱啊。。。完全都不知道div该怎么放好了。。。看了好久然后还是把整个页面切成了几个大的部分。。然后一些小的东西都是用position+left+top...一点点调整到合适的位置的。。

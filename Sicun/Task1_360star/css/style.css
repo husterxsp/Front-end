@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: underline;
+}
+img{
+    cursor: pointer;
+}
+#wrapper{
+    font-family: arial, helvetica, sans-serif;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #c2c2c2;
+    box-shadow: 0 0 10px 2px #aaa;
+}
+#hint{
+    width: 800px;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 10px;
+}
+#header{
+    width: 800px;
+    height: 70px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #262626;
+    box-shadow: 0 0 10px 2px #aaa;
+}
+#headerContent{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+#headerContent1{
+    font-size: 20px;
+    color: #fff;
+}
+#headerContent2{
+    font-size: 15px;
+    margin-top: 3px;
+    color: #c9c9c9;
+}
+#me{
+    position: relative;
+    z-index: 1;
+    top: -330px;
+    float: left;
+    width: 350px;
+    height: 560px;
+    background: url(../images/myself.png) no-repeat;
+    background-size: 100% 100%;
+}
+/*---------------------top----------------*/
+#top{
+    height: 500px;
+}
+#what{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    letter-spacing: 3px;
+}
+#topBorder{
+    position: absolute;
+    right: 70px;
+    width: 37px;
+    height: 500px;
+    background-color: #32e6b6;
+}
+/*--------------top end----------------------*/
+
+/*---------------------right----------------*/
+#right{
+    float: left;
+    width: 400px;
+}
+
+#workBorder{
+    width: 330px;
+    height: 20px;
+    background-color: #32e6b6;
+}
+#workTitle{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -22px;
+    margin-left: 15px;
+    letter-spacing: 4px;
+}
+#workImages{
+    width: 330px;
+    height: 180px;
+}
+#workImages img:hover{
+    opacity: 0.8;
+}
+#never{
+    position: relative;
+    top: 50px;
+}
+#neverTitle{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #32e6b6;
+}
+#neverImage{
+    position: relative;
+    left: 150px;
+    width: 200px;
+    height: 160px;
+    background-image: url(../images/vsvs.png);
+    background-size: 100% 100%;
+}
+#note{
+    position: relative;
+    left: 180px;
+    width: 120px;
+    height: 80px;
+    background: url(../images/note.png);
+    background-size: 100% 100%;
+}
+#follow{
+    margin-top: 150px;
+    margin-left: 100px;
+}
+#followTitle{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+ul li{
+    line-height: 35px;
+    position: relative;
+    left: 30px;
+    list-style-type: none;
+}
+i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../images/sprites.png) no-repeat;
+}
+#github i{
+    background-position: 0 0;
+}
+#zhihu i{
+    background-position: 0 -23px;
+}
+#contact{
+    margin-top: 160px;
+    margin-left: 100px;
+}
+#contactTitle{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+#gmail i{
+    background-position: 0 -49px;
+}
+#phone i{
+    background-position: 0 -76px;
+}
+#qq i{
+    background-position: 0 -102px;
+}
+/*----------------right end-------------------*/
+
+/*---------------left------------------*/
+#left{
+    position: relative;
+    float: left;
+    width: 400px;
+}
+#leftPaper{
+    position: relative;
+    top: 40px;
+    left: 220px;
+    width: 150px;
+    height: 170px;
+    background: url(../images/leftDesgin.png) no-repeat;
+}
+#leftBorder{
+    position: relative;
+    top: -100px;
+}
+#leftRow1{
+    width: 130px;
+    height: 40px;
+    background-color: #32e6b6;
+}
+#leftColumn{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 700px;
+    background-color: #32e6b6;
+}
+#leftRow2{
+    position: relative;
+    left: 110px;
+    width: 285px;
+    height: 20px;
+    background-color: #32e6b6;
+}
+#school{
+    position: relative;
+    top: -360px;
+    left: 130px;
+    width: 225px;
+    height: 300px;
+}
+#schoolTitle{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -100px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    letter-spacing: 4px;
+}
+#schoolImages{
+    position: relative;
+    width: 300px;
+}
+.min:hover{
+    opacity: .8;
+}
+#shade{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: #000;
+}
+
+
+/*----------------left end--------------------*/
+#vitae{
+    position: relative;
+    height: 600px;
+    margin-top: -220px;
+}
+.vitae_pic_1.min{
+    position: absolute;
+    left: 50px;
+    display: block;
+    box-shadow: 2px 2px 30px #000;
+}
+.vitae_pic_2.min{
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    display: block;
+    box-shadow: 2px 2px 30px #000;
+}
+#pen{
+    position: absolute;
+    top: 198px;
+    right: 40px;
+    width: 30px;
+    height: 340px;
+    background: url(../images/pen.png);
+    background-size: 100% 100%;
+}
+#containRotate{
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 845px;
+    margin-top: -150px;
+    perspective: 2000px;
+    perspective-origin: 50% 30%;
+}
+#rotate{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 600px;
+    height: 790px;
+    margin-bottom: 20px;
+    -webkit-transform: rotateX(60deg) rotateZ(-40deg) rotateY(10deg);/* Safari 和 Chrome */
+       -moz-transform: rotateX(60deg) rotateZ(-40deg) rotateY(10deg);    /* Firefox */
+        -ms-transform: rotateX(60deg) rotateZ(-40deg) rotateY(10deg);     /* IE 9 */
+         -o-transform: rotateX(60deg) rotateZ(-40deg) rotateY(10deg);
+            transform: rotateX(60deg) rotateZ(-40deg) rotateY(10deg);
+    background: url('../images/vitae2.png');
+    background-size: 100%;
+    box-shadow: -7px 7px 10px 7px rgba(0, 0, 0, .5);
+}
+
+#footer{
+    margin-top: 20px;
+    height: 50px;
+}
+#toTop{
+    width: 50px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-image: url('../images/arrow.png');
+    background-size: 100% 100%;
+}
+div:hover #toTop{
+    width: 55px;
+    height: 21px;
+}
